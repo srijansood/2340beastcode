@@ -21,13 +21,12 @@ public class FriendsList extends ActionBarActivity {
 
     private List nameList = new ArrayList();
     private List<User> userList;
-    private ArrayAdapter mAdapter;
     private List<Integer> userIDList;
 
     /**
      * method for on Create that gets the list of your friends from the database and gives the
      * position of the one that you clicked on to the bundle to be used in the next screen
-     * @param savedInstanceState
+     * @param savedInstanceState the bundle that allows you to pass in the position
      */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +35,6 @@ public class FriendsList extends ActionBarActivity {
 
         SQLiteDB db = new SQLiteDB(this);
         List<User> friendList = db.getAllFriends(User.currentUser);
-        List<Integer> userIDList = db.getAllFriendsiDs((User.currentUser));
         db.close();
 
         List nameList = new ArrayList();
@@ -45,7 +43,7 @@ public class FriendsList extends ActionBarActivity {
             nameList.add(user.getName());
         }
 
-        mAdapter = new ArrayAdapter<User>(
+        ArrayAdapter mAdapter = new ArrayAdapter<User>(
                 this,
                 android.R.layout.simple_list_item_activated_1,
                 android.R.id.text1,
@@ -63,7 +61,6 @@ public class FriendsList extends ActionBarActivity {
              * @param id id...
              */
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                String username = ((TextView) view).getText().toString();
                 friendDetails(position);
 
             }
@@ -74,7 +71,7 @@ public class FriendsList extends ActionBarActivity {
     /**
      * friendDetails method that goes initiates the FriendDetails Activity and passes to it, the
      * position of the item that you clicked on
-     * @param position
+     * @param position position tells us the position of the item clicked
      */
     public void friendDetails(int position) {
         Intent i = new Intent(getApplicationContext(), FriendDetails.class);
@@ -98,7 +95,6 @@ public class FriendsList extends ActionBarActivity {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
 
         switch (item.getItemId()) {
             case R.id.action_friends:
@@ -119,8 +115,6 @@ public class FriendsList extends ActionBarActivity {
      */
     public void displayFriends() {
         Intent intent = new Intent(this, FriendsList.class);
-        //username = "dummy";
-//        intent.putExtra(username);
         startActivity(intent);
         finish();
     }
