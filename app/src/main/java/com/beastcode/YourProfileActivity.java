@@ -5,7 +5,7 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
+//import android.view.View;
 import android.widget.TextView;
 
 import com.beastcode.R;
@@ -13,7 +13,7 @@ import com.beastcode.R;
 
 public class YourProfileActivity extends ActionBarActivity {
 
-    String username = "unknown";
+    // --Commented out by Inspection:String username = "unknown";
 
     private int id;
 
@@ -45,9 +45,8 @@ public class YourProfileActivity extends ActionBarActivity {
 
     /**
      * method that starts the sales Map with the locations of the sales on it
-     * @param view view
      */
-    public void saleMap(View view) {
+    public void saleMap() {
         Intent intent = new Intent(this, MapsActivityReports.class);
         startActivity(intent);
     }
@@ -55,9 +54,8 @@ public class YourProfileActivity extends ActionBarActivity {
 
     /**
      * method to go logout and go back to the main menu
-     * @param view view
      */
-    public void logout(View view) {
+    public void logout() {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
         finish();
@@ -65,9 +63,8 @@ public class YourProfileActivity extends ActionBarActivity {
 
     /**
      * request an item button directs here
-     * @param view view
      */
-    public void requestItem(View view) {
+    public void requestItem() {
         Intent intent = new Intent(this, RequestItemActivity.class);
         intent.putExtra("id", id);
         startActivity(intent);
@@ -76,9 +73,8 @@ public class YourProfileActivity extends ActionBarActivity {
 
     /**
      * submit an item report button.
-     * @param view view
      */
-    public void submitReportButton(View view) {
+    public void submitReportButton() {
         Intent intent = new Intent(this, ReportingSaleActivity.class);
         intent.putExtra("id", id);
         startActivity(intent);
@@ -127,7 +123,7 @@ public class YourProfileActivity extends ActionBarActivity {
     /**
      * method for the menu so when Friends is clicked it opens up the FriendsList activity
      */
-    public void displayFriends() {
+    void displayFriends() {
         Intent intent = new Intent(this, FriendsList.class);
         //username = "dummy";
 //        intent.putExtra(username);
@@ -137,12 +133,12 @@ public class YourProfileActivity extends ActionBarActivity {
     /**
      * method for the menu so when Add Friends is clicked, it opens up the notFriendsListActivity.
      */
-    public void displayNotFriends() {
+    void displayNotFriends() {
         // display the list of people who are not your friends so you can add them
         Intent intent = new Intent(this, notFriendsListActivity.class);
         startActivity(intent);
     }
-    public void displayRequestedItems() {
+    void displayRequestedItems() {
         Intent intent = new Intent(this, RequestedItemsList.class);
         startActivity(intent);
     }
