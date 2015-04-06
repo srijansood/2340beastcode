@@ -5,7 +5,6 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.EditText;
 
 import com.beastcode.R;
@@ -16,13 +15,12 @@ public class RequestItemActivity extends ActionBarActivity {
 
     private EditText itemName, maxPrice, location;
     private int id;
-    private User requester;
 
 
     /**
      * onCreate method that gets the different properties of an item and puts them into
      * the database under the table of Items
-     * @param savedInstanceState
+     * @param savedInstanceState default
      */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,9 +40,8 @@ public class RequestItemActivity extends ActionBarActivity {
 
     /**
      * submit button that allows for the item to be put into the database
-     * @param view
      */
-    public void submitItemRequest(View view) {
+    public void submitItemRequest() {
         String riName = itemName.getText().toString();
         String riMaxPriceCheck = maxPrice.getText().toString();
         int riMaxPrice = 0;
@@ -68,7 +65,7 @@ public class RequestItemActivity extends ActionBarActivity {
             location.requestFocus();
         } else {
             SQLiteDB db = new SQLiteDB(this);
-            requester = db.getUser(id);
+            User requester = db.getUser(id);
 //            Message.message(this, id + " is the id of requester");
             ItemRequest item = new ItemRequest(requester, riName, riMaxPrice, riLocation);
             db.addItemRequest(item);
