@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 //import android.view.View;
-import android.view.View;
 import android.widget.TextView;
 
 import com.beastcode.R;
@@ -124,7 +123,7 @@ public class YourProfileActivity extends ActionBarActivity {
     /**
      * method for the menu so when Friends is clicked it opens up the FriendsList activity
      */
-    void displayFriends() {
+    private void displayFriends() {
         Intent intent = new Intent(this, FriendsList.class);
         //username = "dummy";
 //        intent.putExtra(username);
@@ -134,30 +133,13 @@ public class YourProfileActivity extends ActionBarActivity {
     /**
      * method for the menu so when Add Friends is clicked, it opens up the notFriendsListActivity.
      */
-    void displayNotFriends() {
+    private void displayNotFriends() {
         // display the list of people who are not your friends so you can add them
         Intent intent = new Intent(this, notFriendsListActivity.class);
         startActivity(intent);
     }
-    void displayRequestedItems() {
+    private void displayRequestedItems() {
         Intent intent = new Intent(this, RequestedItemsList.class);
         startActivity(intent);
-    }
-
-
-    @SuppressWarnings("EmptyMethod")
-    public void logout(View view) {
-    }
-
-    @SuppressWarnings("EmptyMethod")
-    public void requestItem(View view) {
-    }
-
-    @SuppressWarnings("EmptyMethod")
-    public void submitReportButton(View view) {
-    }
-
-    @SuppressWarnings("EmptyMethod")
-    public void saleMap(View view) {
     }
 }

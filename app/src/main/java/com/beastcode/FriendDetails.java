@@ -59,7 +59,7 @@ public class FriendDetails extends ActionBarActivity {
     /**
      * method to go back to the friend list //not yet implemented
      */
-    void back() {
+    private void back() {
         Intent intent = new Intent(this, FriendsList.class);
         startActivity(intent);
         finish();
@@ -95,7 +95,7 @@ public class FriendDetails extends ActionBarActivity {
     /**
      * method for the menu so when Friends is clicked it opens up the FriendsList activity
      */
-    void displayFriends() {
+    private void displayFriends() {
         Intent intent = new Intent(this, FriendsList.class);
         //username = "dummy";
 //        intent.putExtra(username);
@@ -106,7 +106,7 @@ public class FriendDetails extends ActionBarActivity {
     /**
      * method for the menu so when Add Friends is clicked, it opens up the notFriendsListActivity.
      */
-    void displayNotFriends() {
+    private void displayNotFriends() {
         // display the list of people who are not your friends so you can add them
         Intent intent = new Intent(this, notFriendsListActivity.class);
         startActivity(intent);

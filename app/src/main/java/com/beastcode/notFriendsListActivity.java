@@ -77,7 +77,7 @@ public class notFriendsListActivity extends ActionBarActivity {
      * list
      * @param position the position of the list they were in.
      */
-    void addToFriendList(int position) {
+    private void addToFriendList(int position) {
         SQLiteDB db = new SQLiteDB(this);
         db.addFriend(User.currentUser, userList.get(position));
         db.close();
@@ -125,7 +125,7 @@ public class notFriendsListActivity extends ActionBarActivity {
     /**
      * method for the menu so when Friends is clicked it opens up the FriendsList activity
      */
-    void displayFriends() {
+    private void displayFriends() {
         Intent intent = new Intent(this, FriendsList.class);
         //username = "dummy";
 //        intent.putExtra(username);
@@ -136,7 +136,7 @@ public class notFriendsListActivity extends ActionBarActivity {
     /**
      * method for the menu so when Add Friends is clicked, it opens up the notFriendsListActivity.
      */
-    void displayNotFriends() {
+    private void displayNotFriends() {
         // display the list of people who are not your friends so you can add them
         Intent intent = new Intent(this, notFriendsListActivity.class);
         startActivity(intent);

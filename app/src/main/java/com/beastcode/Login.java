@@ -98,7 +98,7 @@ public class Login extends Activity implements LoaderManager.LoaderCallbacks<Cur
      * If there are form errors (invalid email, missing fields, etc.), the
      * errors are presented and no actual login attempt is made.
      */
-    void attemptLogin() {
+    private void attemptLogin() {
         if (mAuthTask != null) {
             return;
         }
@@ -177,7 +177,7 @@ public class Login extends Activity implements LoaderManager.LoaderCallbacks<Cur
     /**
      * Shows the progress UI and hides the login form.
      */
-    void showProgress() {
+    private void showProgress() {
         // On Honeycomb MR2 we have the ViewPropertyAnimator APIs, which allow
         // for very easy animations. If available, use these APIs to fade-in
         // the progress spinner.
@@ -320,7 +320,7 @@ public class Login extends Activity implements LoaderManager.LoaderCallbacks<Cur
      * method to determine if the interest form should be shown before your profile is.
      * @param currentUser the user who's profile has been selected
      */
-    boolean launchInterest(User currentUser) {
+    private boolean launchInterest(User currentUser) {
 //        Message.message(this, currentUser.getName() + " is the current user");
         List<ItemRequest> items = db.getRequestsByUser(currentUser);
         List<ItemRequest> reports = db.getAllReportsITEM();

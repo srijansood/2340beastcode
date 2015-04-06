@@ -42,6 +42,19 @@
       <entry_point TYPE="method" FQNAME="com.beastcode.YourProfileActivity void logout()" />
       <entry_point TYPE="method" FQNAME="com.beastcode.YourProfileActivity void requestItem()" />
       <entry_point TYPE="method" FQNAME="com.beastcode.YourProfileActivity void submitReportButton()" />
+      <entry_point TYPE="method" FQNAME="com.beastcode.FriendDetails void removeFriend(android.view.View view)" />
+      <entry_point TYPE="method" FQNAME="com.beastcode.Login void gotoWelcomeScreen(android.view.View view)" />
+      <entry_point TYPE="method" FQNAME="com.beastcode.MainActivity void loginScreen(android.view.View view)" />
+      <entry_point TYPE="method" FQNAME="com.beastcode.MainActivity void registerScreen(android.view.View view)" />
+      <entry_point TYPE="method" FQNAME="com.beastcode.Register void addUser(android.view.View view)" />
+      <entry_point TYPE="method" FQNAME="com.beastcode.Register void cancel(android.view.View view)" />
+      <entry_point TYPE="method" FQNAME="com.beastcode.ReportingSaleActivity void submitReport(android.view.View view)" />
+      <entry_point TYPE="method" FQNAME="com.beastcode.ReportingSaleActivity void addPinMap(android.view.View view)" />
+      <entry_point TYPE="method" FQNAME="com.beastcode.ReportsInterestActivity void continueToProfile(android.view.View view)" />
+      <entry_point TYPE="method" FQNAME="com.beastcode.RequestItemActivity void submitItemRequest(android.view.View view)" />
+      <entry_point TYPE="method" FQNAME="com.beastcode.SettingsActivity void showFriends(android.view.View view)" />
+      <entry_point TYPE="method" FQNAME="com.beastcode.SettingsActivity void clearReports(android.view.View view)" />
+      <entry_point TYPE="method" FQNAME="com.beastcode.SettingsActivity void showReports(android.view.View view)" />
     </entry_points>
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">

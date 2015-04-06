@@ -449,7 +449,7 @@ class SQLiteDB extends SQLiteOpenHelper {
      * @param base user with a friend
      * @param friend new friend of the user
      */
-    void addFriendOther(User base, User friend) {
+    private void addFriendOther(User base, User friend) {
         SQLiteDatabase db = this.getWritableDatabase();
 
         ContentValues values = new ContentValues();
@@ -591,7 +591,7 @@ class SQLiteDB extends SQLiteOpenHelper {
      * @param user user to be deleted
      * @param friend friend to be deleted
      */
-    void deleteFriendOther(User user, User friend) {
+    private void deleteFriendOther(User user, User friend) {
         SQLiteDatabase db = this.getWritableDatabase();
         db.delete(TABLE_FRIENDS, KEY_BASE + " = ? AND " + KEY_FRIEND + " = ?",
                 new String[] { String.valueOf(user.getId()), String.valueOf(friend.getId()) });

@@ -104,23 +104,23 @@ public class SettingsActivity extends ActionBarActivity {
     }
 
     @SuppressWarnings("EmptyMethod")
-    public void databaseContents(View view) {
+    public void databaseContents() {
     }
 
     @SuppressWarnings("EmptyMethod")
-    public void clearDatabase(View view) {
+    public void clearDatabase() {
     }
 
     @SuppressWarnings("EmptyMethod")
-    public void showItemsRequested(View view) {
+    public void showItemsRequested() {
     }
 
     @SuppressWarnings("EmptyMethod")
-    public void clearUsersAndFriends(View view) {
+    public void clearUsersAndFriends() {
     }
 
     @SuppressWarnings("EmptyMethod")
-    public void clearItemsRequested(View view) {
+    public void clearItemsRequested() {
     }
 
     @SuppressWarnings("EmptyMethod")

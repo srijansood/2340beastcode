@@ -73,7 +73,7 @@ public class MainActivity extends ActionBarActivity {
     /**
      * Method that calls the settings tab
      */
-    void settings() {
+    private void settings() {
         Intent intent = new Intent(this, SettingsActivity.class);
         startActivity(intent);
     }
