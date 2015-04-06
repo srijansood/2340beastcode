@@ -1,11 +1,11 @@
 package com.beastcode;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
@@ -13,9 +13,6 @@ import com.beastcode.R;
 
 
 public class Register extends ActionBarActivity {
-
-    EditText username, password;
-    SQLiteDB sqliteHelp;
 
     private Button button;
     private EditText nameText;
@@ -29,15 +26,16 @@ public class Register extends ActionBarActivity {
      * onCreate that handles registration of a new user
      * @param savedInstanceState Bundles!
      */
+    @SuppressLint("CutPasteId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_register);
 
-        username = (EditText) findViewById(R.id.rUsername);
-        password = (EditText) findViewById(R.id.rPassword);
-        sqliteHelp = new SQLiteDB(this);
+        @SuppressWarnings("UnusedAssignment") @SuppressLint("CutPasteId") EditText username = (EditText) findViewById(R.id.rUsername);
+        @SuppressWarnings("UnusedAssignment") @SuppressLint("CutPasteId") EditText password = (EditText) findViewById(R.id.rPassword);
+        @SuppressWarnings("UnusedAssignment") SQLiteDB sqliteHelp = new SQLiteDB(this);
 
 //        button = (Button)findViewById(R.id.button);
         nameText = (EditText)findViewById(R.id.rName);
@@ -52,9 +50,8 @@ public class Register extends ActionBarActivity {
 
     /**
      * method that handles adding the user to the SQLite database
-     * @param view View
      */
-    public void addUser(View view) {
+    public void addUser() {
 //        String user = username.getText().toString();
 //        String pass = password.getText().toString();
 //
@@ -94,9 +91,8 @@ public class Register extends ActionBarActivity {
 
     /**
      * method that takes you to the login screen!
-     * @param view view
      */
-    public void loginScreen(View view) {
+    public void loginScreen() {
         Intent intent = new Intent(this, Login.class);
         startActivity(intent);
         finish();
@@ -104,9 +100,8 @@ public class Register extends ActionBarActivity {
 
     /**
      * method that cancels and brings  you back to the main screen
-     * @param view View
      */
-    public void cancel(View view) {
+    public void cancel() {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
         finish();
