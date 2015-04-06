@@ -16,6 +16,32 @@
       <entry_point TYPE="field" FQNAME="com.beastcode.Register button" />
       <entry_point TYPE="method" FQNAME="com.beastcode.Register void loginScreen()" />
       <entry_point TYPE="field" FQNAME="com.beastcode.notFriendsListActivity STATE_ACTIVATED_POSITION" />
+      <entry_point TYPE="method" FQNAME="com.beastcode.FriendDetails void removeFriend()" />
+      <entry_point TYPE="method" FQNAME="com.beastcode.ItemRequest int getRequestId()" />
+      <entry_point TYPE="method" FQNAME="com.beastcode.MainActivity void testMessage()" />
+      <entry_point TYPE="method" FQNAME="com.beastcode.MainActivity void registerScreen()" />
+      <entry_point TYPE="method" FQNAME="com.beastcode.MainActivity void loginScreen()" />
+      <entry_point TYPE="method" FQNAME="com.beastcode.Register void addUser()" />
+      <entry_point TYPE="method" FQNAME="com.beastcode.Register void cancel()" />
+      <entry_point TYPE="method" FQNAME="com.beastcode.Login void gotoWelcomeScreen()" />
+      <entry_point TYPE="field" FQNAME="com.beastcode.Login.ProfileQuery IS_PRIMARY" />
+      <entry_point TYPE="method" FQNAME="com.beastcode.Login.UserLoginTask UserLoginTask(java.lang.String username, java.lang.String password)" />
+      <entry_point TYPE="method" FQNAME="com.beastcode.ReportingSaleActivity void addPinMap()" />
+      <entry_point TYPE="method" FQNAME="com.beastcode.ReportingSaleActivity void submitReport()" />
+      <entry_point TYPE="method" FQNAME="com.beastcode.ReportsInterestActivity void continueToProfile()" />
+      <entry_point TYPE="method" FQNAME="com.beastcode.RequestItemActivity void submitItemRequest()" />
+      <entry_point TYPE="method" FQNAME="com.beastcode.SettingsActivity void databaseContents()" />
+      <entry_point TYPE="method" FQNAME="com.beastcode.SettingsActivity void clearDatabase()" />
+      <entry_point TYPE="method" FQNAME="com.beastcode.SettingsActivity void clearUsersAndFriends()" />
+      <entry_point TYPE="method" FQNAME="com.beastcode.SettingsActivity void clearItemsRequested()" />
+      <entry_point TYPE="method" FQNAME="com.beastcode.SettingsActivity void clearReports()" />
+      <entry_point TYPE="method" FQNAME="com.beastcode.SettingsActivity void showItemsRequested()" />
+      <entry_point TYPE="method" FQNAME="com.beastcode.SettingsActivity void showFriends()" />
+      <entry_point TYPE="method" FQNAME="com.beastcode.SettingsActivity void showReports()" />
+      <entry_point TYPE="method" FQNAME="com.beastcode.YourProfileActivity void saleMap()" />
+      <entry_point TYPE="method" FQNAME="com.beastcode.YourProfileActivity void logout()" />
+      <entry_point TYPE="method" FQNAME="com.beastcode.YourProfileActivity void requestItem()" />
+      <entry_point TYPE="method" FQNAME="com.beastcode.YourProfileActivity void submitReportButton()" />
     </entry_points>
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">

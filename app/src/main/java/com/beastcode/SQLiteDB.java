@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class SQLiteDB extends SQLiteOpenHelper {
+class SQLiteDB extends SQLiteOpenHelper {
 
     // All Static variables
     // Database Version
