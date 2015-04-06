@@ -1,7 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="EntryPointsManager">
-    <entry_points version="2.0" />
+    <entry_points version="2.0">
+      <entry_point TYPE="method" FQNAME="com.beastcode.SQLiteDB java.util.List&lt;java.lang.String&gt; getAllReports()" />
+      <entry_point TYPE="method" FQNAME="com.beastcode.SQLiteDB void deleteRequest(int id)" />
+      <entry_point TYPE="method" FQNAME="com.beastcode.SQLiteDB com.beastcode.ItemRequest getItemRequest(int id)" />
+      <entry_point TYPE="method" FQNAME="com.beastcode.SQLiteDB java.util.List&lt;java.lang.Integer&gt; getAllFriendsiDs(com.beastcode.User user)" />
+      <entry_point TYPE="method" FQNAME="com.beastcode.SQLiteDB int getUsersCount()" />
+      <entry_point TYPE="method" FQNAME="com.beastcode.SQLiteDB void deleteUser(com.beastcode.User user)" />
+      <entry_point TYPE="method" FQNAME="com.beastcode.SQLiteDB int updateUser(com.beastcode.User user)" />
+      <entry_point TYPE="field" FQNAME="com.beastcode.SQLiteDB KEY_PRICE" />
+      <entry_point TYPE="field" FQNAME="com.beastcode.Register username" />
+      <entry_point TYPE="field" FQNAME="com.beastcode.Register password" />
+      <entry_point TYPE="field" FQNAME="com.beastcode.Register sqliteHelp" />
+      <entry_point TYPE="field" FQNAME="com.beastcode.Register button" />
+      <entry_point TYPE="method" FQNAME="com.beastcode.Register void loginScreen()" />
+      <entry_point TYPE="field" FQNAME="com.beastcode.notFriendsListActivity STATE_ACTIVATED_POSITION" />
+    </entry_points>
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
