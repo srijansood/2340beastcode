@@ -145,15 +145,19 @@ public class YourProfileActivity extends ActionBarActivity {
     }
 
 
+    @SuppressWarnings("EmptyMethod")
     public void logout(View view) {
     }
 
+    @SuppressWarnings("EmptyMethod")
     public void requestItem(View view) {
     }
 
+    @SuppressWarnings("EmptyMethod")
     public void submitReportButton(View view) {
     }
 
+    @SuppressWarnings("EmptyMethod")
     public void saleMap(View view) {
     }
 }

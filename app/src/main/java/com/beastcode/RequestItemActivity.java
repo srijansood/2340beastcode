@@ -103,6 +103,7 @@ public class RequestItemActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    @SuppressWarnings("EmptyMethod")
     public void submitItemRequest(View view) {
     }
 }

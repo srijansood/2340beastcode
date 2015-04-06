@@ -103,27 +103,35 @@ public class SettingsActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    @SuppressWarnings("EmptyMethod")
     public void databaseContents(View view) {
     }
 
+    @SuppressWarnings("EmptyMethod")
     public void clearDatabase(View view) {
     }
 
+    @SuppressWarnings("EmptyMethod")
     public void showItemsRequested(View view) {
     }
 
+    @SuppressWarnings("EmptyMethod")
     public void clearUsersAndFriends(View view) {
     }
 
+    @SuppressWarnings("EmptyMethod")
     public void clearItemsRequested(View view) {
     }
 
+    @SuppressWarnings("EmptyMethod")
     public void showFriends(View view) {
     }
 
+    @SuppressWarnings("EmptyMethod")
     public void clearReports(View view) {
     }
 
+    @SuppressWarnings("EmptyMethod")
     public void showReports(View view) {
     }
 }

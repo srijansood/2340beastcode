@@ -114,6 +114,7 @@ public class ReportsInterestActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    @SuppressWarnings("EmptyMethod")
     public void continueToProfile(View view) {
     }
 }
