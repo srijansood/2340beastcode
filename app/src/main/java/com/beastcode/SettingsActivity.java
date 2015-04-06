@@ -4,14 +4,13 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 
 import com.beastcode.R;
 
 
 public class SettingsActivity extends ActionBarActivity {
 
-    SQLiteDB sqliteHelp;
+    private SQLiteDB sqliteHelp;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,68 +20,61 @@ public class SettingsActivity extends ActionBarActivity {
 
     /**
      * method to call to see all of the contents of the database table with users
-     * @param view View
      */
-    public void databaseContents(View view) {
+    public void databaseContents() {
         String users = sqliteHelp.getAllUsersString();
         Message.message(this, users);
     }
 
     /**
-     * method to clear the database of eveything in every table
-     * @param view View
+     * method to clear the database of everything in every table
      */
-    public void clearDatabase(View view) {
+    public void clearDatabase() {
         sqliteHelp.clearDatabase();
         Message.message(this, "Database Cleared");
     }
 
     /**
      * clear the users from the database
-     * @param view View
      */
-    public void clearUsersAndFriends(View view) {
+    public void clearUsersAndFriends() {
         sqliteHelp.clearUsers();
         Message.message(this, "Users and Friends Cleared");
     }
 
     /**
      * method that clears the requested items from the database
-     * @param view
      */
-    public void clearItemsRequested(View view) {
+    public void clearItemsRequested() {
         sqliteHelp.clearItemsRequested();
         Message.message(this, "Items Requested Cleared");
     }
 
     /**
      * method that clears the reports in the database
-     * @param view
      */
-    public void clearReports(View view) {
+    public void clearReports() {
         sqliteHelp.clearReports();
         Message.message(this, "Reports Cleared");
     }
 
     /**
      * method that shows all the items that have been requested
-     * @param view View
      */
-    public void showItemsRequested(View view) {
+    public void showItemsRequested() {
         String itemsList = sqliteHelp.getAllItemsString();
         Message.message(this, itemsList);
     }
 
     /**
      * method that shows friends table in database
-     * @param view view
      */
-    public void showFriends(View view) {
+    public void showFriends() {
         String friends = sqliteHelp.getAllFriendsString();
         Message.message(this, friends);
     }
 
-    public void showReports(View view) {
+    public void showReports() {
         String reports = sqliteHelp.getAllReportsString();
         Message.message(this, reports);
     }
