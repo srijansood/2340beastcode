@@ -102,35 +102,53 @@ public class SettingsActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    @SuppressWarnings("EmptyMethod")
-    public void databaseContents() {
-    }
+// --Commented out by Inspection START (4/6/15, 6:49 PM):
+//    @SuppressWarnings("EmptyMethod")
+//    public void databaseContents() {
+//    }
+// --Commented out by Inspection STOP (4/6/15, 6:49 PM)
 
-    @SuppressWarnings("EmptyMethod")
-    public void clearDatabase() {
-    }
+// --Commented out by Inspection START (4/6/15, 6:49 PM):
+//    @SuppressWarnings("EmptyMethod")
+//    public void clearDatabase() {
+//    }
+// --Commented out by Inspection STOP (4/6/15, 6:49 PM)
 
-    @SuppressWarnings("EmptyMethod")
-    public void showItemsRequested() {
-    }
+// --Commented out by Inspection START (4/6/15, 6:49 PM):
+// --Commented out by Inspection START (4/6/15, 6:49 PM):
+////    @SuppressWarnings("EmptyMethod")
+////    public void showItemsRequested() {
+////    }
+//// --Commented out by Inspection STOP (4/6/15, 6:49 PM)
+// --Commented out by Inspection STOP (4/6/15, 6:49 PM)
 
-    @SuppressWarnings("EmptyMethod")
-    public void clearUsersAndFriends() {
-    }
+// --Commented out by Inspection START (4/6/15, 6:50 PM):
+//    @SuppressWarnings("EmptyMethod")
+//    public void clearUsersAndFriends() {
+//    }
+// --Commented out by Inspection STOP (4/6/15, 6:50 PM)
 
-    @SuppressWarnings("EmptyMethod")
-    public void clearItemsRequested() {
-    }
+// --Commented out by Inspection START (4/6/15, 6:49 PM):
+//    @SuppressWarnings("EmptyMethod")
+//    public void clearItemsRequested() {
+//    }
+// --Commented out by Inspection STOP (4/6/15, 6:49 PM)
 
-    @SuppressWarnings("EmptyMethod")
-    public void showFriends() {
-    }
+// --Commented out by Inspection START (4/6/15, 6:49 PM):
+//    @SuppressWarnings("EmptyMethod")
+//    public void showFriends() {
+//    }
+// --Commented out by Inspection STOP (4/6/15, 6:49 PM)
 
-    @SuppressWarnings("EmptyMethod")
-    public void clearReports() {
-    }
+// --Commented out by Inspection START (4/6/15, 6:49 PM):
+//    @SuppressWarnings("EmptyMethod")
+//    public void clearReports() {
+//    }
+// --Commented out by Inspection STOP (4/6/15, 6:49 PM)
 
-    @SuppressWarnings("EmptyMethod")
-    public void showReports() {
-    }
+// --Commented out by Inspection START (4/6/15, 6:49 PM):
+//    @SuppressWarnings("EmptyMethod")
+//    public void showReports() {
+//    }
+// --Commented out by Inspection STOP (4/6/15, 6:49 PM)
 }

@@ -129,11 +129,15 @@ public class Register extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    @SuppressWarnings("EmptyMethod")
-    public void addUser() {
-    }
+// --Commented out by Inspection START (4/6/15, 6:49 PM):
+//    @SuppressWarnings("EmptyMethod")
+//    public void addUser() {
+//    }
+// --Commented out by Inspection STOP (4/6/15, 6:49 PM)
 
-    @SuppressWarnings("EmptyMethod")
-    public void cancel() {
-    }
+// --Commented out by Inspection START (4/6/15, 6:49 PM):
+//    @SuppressWarnings("EmptyMethod")
+//    public void cancel() {
+//    }
+// --Commented out by Inspection STOP (4/6/15, 6:49 PM)
 }

@@ -243,9 +243,11 @@ public class Login extends Activity implements LoaderManager.LoaderCallbacks<Cur
 
     }
 
-    @SuppressWarnings("EmptyMethod")
-    public void gotoWelcomeScreen() {
-    }
+// --Commented out by Inspection START (4/6/15, 6:49 PM):
+//    @SuppressWarnings("EmptyMethod")
+//    public void gotoWelcomeScreen() {
+//    }
+// --Commented out by Inspection STOP (4/6/15, 6:49 PM)
 
     /**
      * Responsible for profile queries

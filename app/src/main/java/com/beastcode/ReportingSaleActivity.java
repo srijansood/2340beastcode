@@ -114,11 +114,15 @@ public class ReportingSaleActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    @SuppressWarnings("EmptyMethod")
-    public void submitReport() {
-    }
+// --Commented out by Inspection START (4/6/15, 6:49 PM):
+//    @SuppressWarnings("EmptyMethod")
+//    public void submitReport() {
+//    }
+// --Commented out by Inspection STOP (4/6/15, 6:49 PM)
 
-    @SuppressWarnings("EmptyMethod")
-    public void addPinMap() {
-    }
+// --Commented out by Inspection START (4/6/15, 6:49 PM):
+//    @SuppressWarnings("EmptyMethod")
+//    public void addPinMap() {
+//    }
+// --Commented out by Inspection STOP (4/6/15, 6:49 PM)
 }

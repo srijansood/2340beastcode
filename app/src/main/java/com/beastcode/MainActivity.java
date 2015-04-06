@@ -77,11 +77,15 @@ public class MainActivity extends ActionBarActivity {
         startActivity(intent);
     }
 
-    @SuppressWarnings("EmptyMethod")
-    public void loginScreen() {
-    }
+// --Commented out by Inspection START (4/6/15, 6:49 PM):
+//    @SuppressWarnings("EmptyMethod")
+//    public void loginScreen() {
+//    }
+// --Commented out by Inspection STOP (4/6/15, 6:49 PM)
 
-    @SuppressWarnings("EmptyMethod")
-    public void registerScreen() {
-    }
+// --Commented out by Inspection START (4/6/15, 6:49 PM):
+//    @SuppressWarnings("EmptyMethod")
+//    public void registerScreen() {
+//    }
+// --Commented out by Inspection STOP (4/6/15, 6:49 PM)
 }

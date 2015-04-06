@@ -112,7 +112,9 @@ public class FriendDetails extends ActionBarActivity {
         finish();
     }
 
-    @SuppressWarnings("EmptyMethod")
-    public void removeFriend() {
-    }
+// --Commented out by Inspection START (4/6/15, 6:49 PM):
+//    @SuppressWarnings("EmptyMethod")
+//    public void removeFriend() {
+//    }
+// --Commented out by Inspection STOP (4/6/15, 6:49 PM)
 }
