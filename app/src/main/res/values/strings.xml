@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">SmartShop</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_register">Register</string>
+    <string name="title_activity_login">Login</string>
+    <string name="title_activity_your_profile">YourProfileActivity</string>
+    <string name="title_activity_friends_list">FriendsList</string>
+    <string name="title_activity_main_screen">MainScreenActivity</string>
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_example">Example action</string>
+    <string name="title_activity_not_friends_list">notFriendsListActivity</string>
+    <string name="title_activity_friend_details">FriendDetails</string>
+    <string name="title_activity_settings">SettingsActivity</string>
+    <string name="title_activity_request_item">RequestItemActivity</string>
+    <string name="title_activity_item_request_details">ItemRequestDetails</string>
+    <string name="title_activity_requested_items_list">RequestedItemsList</string>
+    <string name="title_activity_reporting_sale">ReportingSaleActivity</string>
+    <string name="title_activity_reports_interest">ReportsInterestActivity</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_maps_activity_reports">Map</string>
+
+</resources>

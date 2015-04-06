@@ -1,0 +1,87 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.beastcode.ItemRequestDetails">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ProductName"
+        android:id="@+id/irdName"
+        android:layout_marginTop="113dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Price"
+        android:id="@+id/irdPrice"
+        android:layout_below="@+id/irdName"
+        android:layout_alignRight="@+id/irdName"
+        android:layout_alignEnd="@+id/irdName"
+        android:layout_marginTop="37dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Product Name"
+        android:id="@+id/irdNameTitle"
+        android:layout_alignBottom="@+id/irdName"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Max Price"
+        android:id="@+id/irdMaxPriceTitle"
+        android:layout_alignBottom="@+id/irdPrice"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="User Location"
+        android:id="@+id/irdUserLocationTitle"
+        android:layout_below="@+id/irdMaxPriceTitle"
+        android:layout_marginTop="30dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Location"
+        android:id="@+id/irdLocation"
+        android:layout_alignBottom="@+id/irdUserLocationTitle"
+        android:layout_alignRight="@+id/irdName"
+        android:layout_alignEnd="@+id/irdName" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Requester"
+        android:id="@+id/irdRequesterTitle"
+        android:layout_above="@+id/irdNameTitle"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="27dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Requester"
+        android:id="@+id/irdRequester"
+        android:layout_alignTop="@+id/irdRequesterTitle"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+</RelativeLayout>

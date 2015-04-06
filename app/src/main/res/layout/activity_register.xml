@@ -1,0 +1,88 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.beastcode.Register">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Register"
+        android:id="@+id/database"
+        android:onClick="addUser"
+        android:layout_below="@+id/rPassword2"
+        android:layout_alignRight="@+id/rPassword2"
+        android:layout_alignEnd="@+id/rPassword2" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/rPassword"
+        android:contentDescription="Password"
+        android:hint="Password"
+        android:layout_below="@+id/rUsername"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="38dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rUsername"
+        android:inputType="textEmailAddress"
+        android:hint="Username"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/rPassword"
+        android:layout_alignStart="@+id/rPassword"
+        android:layout_marginTop="118dp"
+        android:layout_alignRight="@+id/rPassword"
+        android:layout_alignEnd="@+id/rPassword" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/rPassword2"
+        android:contentDescription="Password"
+        android:hint="Re-enter Password"
+        android:layout_below="@+id/rPassword"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cancel"
+        android:id="@+id/rCancel"
+        android:onClick="cancel"
+        android:layout_alignTop="@+id/database"
+        android:layout_alignLeft="@+id/rPassword2"
+        android:layout_alignStart="@+id/rPassword2" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rName"
+        android:inputType="textEmailAddress"
+        android:hint="Name"
+        android:layout_alignBottom="@+id/rUsername"
+        android:layout_marginBottom="35dp"
+        android:layout_alignLeft="@+id/rUsername"
+        android:layout_alignStart="@+id/rUsername"
+        android:layout_alignRight="@+id/rUsername"
+        android:layout_alignEnd="@+id/rUsername" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:id="@+id/rEmail"
+        android:layout_below="@+id/rUsername"
+        android:layout_centerHorizontal="true"
+        android:hint="Email" />
+
+</RelativeLayout>

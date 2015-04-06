@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:SmartShop="http://schemas.android.com/apk/res-auto">
+    <!-- Friends, should always appear in overflow -->
+    <item android:id="@+id/action_friends"
+        android:title="Friends"
+        SmartShop:showAsAction="never" />
+    <!-- Friends, should always appear in overflow -->
+    <item android:id="@+id/action_Addfriends"
+        android:title="Add Friends"
+        SmartShop:showAsAction="never" />
+    <item android:id="@+id/action_displayRequestedItems"
+        android:title="Requested Items"
+        SmartShop:showAsAction="never" />
+    <!-- Settings, should always be in the overflow -->
+    <item android:id="@+id/action_settings"
+        android:title="@string/action_settings"/>
+    //android:showAsAction="never" />
+</menu>
