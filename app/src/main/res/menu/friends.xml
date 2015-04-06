@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:SmartShop="http://schemas.android.com/apk/res-auto">
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:SmartShop="http://schemas.android.com/apk/res-auto"
+    tools:ignore="ExtraText">
     <!-- Friends, should always appear in overflow -->
     <item android:id="@+id/action_friends"
         android:title="Friends"
@@ -8,7 +10,8 @@
     <!-- Friends, should always appear in overflow -->
     <item android:id="@+id/action_Addfriends"
         android:title="Add Friends"
-        SmartShop:showAsAction="never" />
+        SmartShop:showAsAction="never"
+        tools:ignore="HardcodedText" />
     <item android:id="@+id/action_displayRequestedItems"
         android:title="Requested Items"
         SmartShop:showAsAction="never" />

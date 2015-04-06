@@ -55,6 +55,118 @@
       <entry_point TYPE="method" FQNAME="com.beastcode.SettingsActivity void showFriends(android.view.View view)" />
       <entry_point TYPE="method" FQNAME="com.beastcode.SettingsActivity void clearReports(android.view.View view)" />
       <entry_point TYPE="method" FQNAME="com.beastcode.SettingsActivity void showReports(android.view.View view)" />
+      <entry_point TYPE="method" FQNAME="com.beastcode.ItemRequest ItemRequest()" />
+      <entry_point TYPE="method" FQNAME="com.beastcode.ItemRequest ItemRequest(com.beastcode.User user, java.lang.String name, int price, java.lang.String location)" />
+      <entry_point TYPE="method" FQNAME="com.beastcode.SQLiteDB SQLiteDB(android.content.Context context)" />
+      <entry_point TYPE="field" FQNAME="com.beastcode.FriendDetails user" />
+      <entry_point TYPE="method" FQNAME="com.beastcode.FriendDetails void back()" />
+      <entry_point TYPE="method" FQNAME="com.beastcode.FriendDetails void displayFriends()" />
+      <entry_point TYPE="method" FQNAME="com.beastcode.FriendDetails void displayNotFriends()" />
+      <entry_point TYPE="field" FQNAME="com.beastcode.ItemRequest requestId" />
+      <entry_point TYPE="field" FQNAME="com.beastcode.ItemRequest requester" />
+      <entry_point TYPE="field" FQNAME="com.beastcode.ItemRequest name" />
+      <entry_point TYPE="field" FQNAME="com.beastcode.ItemRequest maxPrice" />
+      <entry_point TYPE="field" FQNAME="com.beastcode.ItemRequest location" />
+      <entry_point TYPE="method" FQNAME="com.beastcode.ItemRequest void setRequestId(int id)" />
+      <entry_point TYPE="method" FQNAME="com.beastcode.ItemRequest com.beastcode.User getRequester()" />
+      <entry_point TYPE="method" FQNAME="com.beastcode.ItemRequest void setRequester(com.beastcode.User user)" />
+      <entry_point TYPE="method" FQNAME="com.beastcode.ItemRequest java.lang.String getName()" />
+      <entry_point TYPE="method" FQNAME="com.beastcode.ItemRequest void setName(java.lang.String name)" />
+      <entry_point TYPE="method" FQNAME="com.beastcode.ItemRequest int getMaxPrice()" />
+      <entry_point TYPE="method" FQNAME="com.beastcode.ItemRequest void setMaxPrice(int price)" />
+      <entry_point TYPE="method" FQNAME="com.beastcode.ItemRequest java.lang.String getLocation()" />
+      <entry_point TYPE="method" FQNAME="com.beastcode.ItemRequest void setLocation(java.lang.String loc)" />
+      <entry_point TYPE="field" FQNAME="com.beastcode.Login mAuthTask" />
+      <entry_point TYPE="field" FQNAME="com.beastcode.Login mUsernameView" />
+      <entry_point TYPE="field" FQNAME="com.beastcode.Login mPasswordView" />
+      <entry_point TYPE="field" FQNAME="com.beastcode.Login mProgressView" />
+      <entry_point TYPE="field" FQNAME="com.beastcode.Login mLoginFormView" />
+      <entry_point TYPE="field" FQNAME="com.beastcode.Login users" />
+      <entry_point TYPE="field" FQNAME="com.beastcode.Login db" />
+      <entry_point TYPE="field" FQNAME="com.beastcode.Login askInterest" />
+      <entry_point TYPE="method" FQNAME="com.beastcode.Login void populateAutoComplete()" />
+      <entry_point TYPE="method" FQNAME="com.beastcode.Login void attemptLogin()" />
+      <entry_point TYPE="method" FQNAME="com.beastcode.Login boolean isUsernameValid(java.lang.String un)" />
+      <entry_point TYPE="method" FQNAME="com.beastcode.Login boolean isPasswordValid(java.lang.String password)" />
+      <entry_point TYPE="method" FQNAME="com.beastcode.Login void showProgress()" />
+      <entry_point TYPE="method" FQNAME="com.beastcode.Login void canLogin()" />
+      <entry_point TYPE="method" FQNAME="com.beastcode.Login boolean launchInterest(com.beastcode.User currentUser)" />
+      <entry_point TYPE="field" FQNAME="com.beastcode.Login.UserLoginTask mUsername" />
+      <entry_point TYPE="field" FQNAME="com.beastcode.Login.UserLoginTask mPassword" />
+      <entry_point TYPE="field" FQNAME="com.beastcode.Login.ProfileQuery PROJECTION" />
+      <entry_point TYPE="field" FQNAME="com.beastcode.Login.ProfileQuery ADDRESS" />
+      <entry_point TYPE="method" FQNAME="com.beastcode.MainActivity void settings()" />
+      <entry_point TYPE="field" FQNAME="com.beastcode.notFriendsListActivity nameList" />
+      <entry_point TYPE="field" FQNAME="com.beastcode.notFriendsListActivity userList" />
+      <entry_point TYPE="field" FQNAME="com.beastcode.notFriendsListActivity mAdapter" />
+      <entry_point TYPE="method" FQNAME="com.beastcode.notFriendsListActivity void addToFriendList(int position)" />
+      <entry_point TYPE="method" FQNAME="com.beastcode.notFriendsListActivity void displayFriends()" />
+      <entry_point TYPE="method" FQNAME="com.beastcode.notFriendsListActivity void displayNotFriends()" />
+      <entry_point TYPE="field" FQNAME="com.beastcode.Register nameText" />
+      <entry_point TYPE="field" FQNAME="com.beastcode.Register unText" />
+      <entry_point TYPE="field" FQNAME="com.beastcode.Register passText" />
+      <entry_point TYPE="field" FQNAME="com.beastcode.Register emailText" />
+      <entry_point TYPE="field" FQNAME="com.beastcode.Register pass2Text" />
+      <entry_point TYPE="field" FQNAME="com.beastcode.ReportingSaleActivity itemName" />
+      <entry_point TYPE="field" FQNAME="com.beastcode.ReportingSaleActivity price" />
+      <entry_point TYPE="field" FQNAME="com.beastcode.ReportingSaleActivity id" />
+      <entry_point TYPE="field" FQNAME="com.beastcode.ReportingSaleActivity prefs" />
+      <entry_point TYPE="field" FQNAME="com.beastcode.ReportsInterestActivity id" />
+      <entry_point TYPE="field" FQNAME="com.beastcode.ReportsInterestActivity username" />
+      <entry_point TYPE="field" FQNAME="com.beastcode.RequestItemActivity itemName" />
+      <entry_point TYPE="field" FQNAME="com.beastcode.RequestItemActivity maxPrice" />
+      <entry_point TYPE="field" FQNAME="com.beastcode.RequestItemActivity location" />
+      <entry_point TYPE="field" FQNAME="com.beastcode.RequestItemActivity id" />
+      <entry_point TYPE="field" FQNAME="com.beastcode.SettingsActivity sqliteHelp" />
+      <entry_point TYPE="field" FQNAME="com.beastcode.SQLiteDB DATABASE_VERSION" />
+      <entry_point TYPE="field" FQNAME="com.beastcode.SQLiteDB DATABASE_NAME" />
+      <entry_point TYPE="field" FQNAME="com.beastcode.SQLiteDB TABLE_USERS" />
+      <entry_point TYPE="field" FQNAME="com.beastcode.SQLiteDB TABLE_FRIENDS" />
+      <entry_point TYPE="field" FQNAME="com.beastcode.SQLiteDB TABLE_ITEMS" />
+      <entry_point TYPE="field" FQNAME="com.beastcode.SQLiteDB TABLE_REPORTS" />
+      <entry_point TYPE="field" FQNAME="com.beastcode.SQLiteDB KEY_ID" />
+      <entry_point TYPE="field" FQNAME="com.beastcode.SQLiteDB KEY_NAME" />
+      <entry_point TYPE="field" FQNAME="com.beastcode.SQLiteDB KEY_UN" />
+      <entry_point TYPE="field" FQNAME="com.beastcode.SQLiteDB KEY_EMAIL" />
+      <entry_point TYPE="field" FQNAME="com.beastcode.SQLiteDB KEY_PW" />
+      <entry_point TYPE="field" FQNAME="com.beastcode.SQLiteDB KEY_NUM_REP" />
+      <entry_point TYPE="field" FQNAME="com.beastcode.SQLiteDB KEY_RATE" />
+      <entry_point TYPE="field" FQNAME="com.beastcode.SQLiteDB KEY_ADMIN" />
+      <entry_point TYPE="field" FQNAME="com.beastcode.SQLiteDB KEY_LOCK" />
+      <entry_point TYPE="field" FQNAME="com.beastcode.SQLiteDB KEY_BASE" />
+      <entry_point TYPE="field" FQNAME="com.beastcode.SQLiteDB KEY_FRIEND" />
+      <entry_point TYPE="field" FQNAME="com.beastcode.SQLiteDB KEY_UID" />
+      <entry_point TYPE="field" FQNAME="com.beastcode.SQLiteDB KEY_ITEM_NAME" />
+      <entry_point TYPE="field" FQNAME="com.beastcode.SQLiteDB KEY_MAX_PRICE" />
+      <entry_point TYPE="field" FQNAME="com.beastcode.SQLiteDB KEY_LOCATION" />
+      <entry_point TYPE="method" FQNAME="com.beastcode.SQLiteDB void addUser(com.beastcode.User user)" />
+      <entry_point TYPE="method" FQNAME="com.beastcode.SQLiteDB com.beastcode.User getUser(int id)" />
+      <entry_point TYPE="method" FQNAME="com.beastcode.SQLiteDB java.util.List&lt;com.beastcode.User&gt; getAllUsers()" />
+      <entry_point TYPE="method" FQNAME="com.beastcode.SQLiteDB java.lang.String getAllUsersString()" />
+      <entry_point TYPE="method" FQNAME="com.beastcode.SQLiteDB java.lang.String getAllItemsString()" />
+      <entry_point TYPE="method" FQNAME="com.beastcode.SQLiteDB java.lang.String getAllReportsString()" />
+      <entry_point TYPE="method" FQNAME="com.beastcode.SQLiteDB java.lang.String getAllFriendsString()" />
+      <entry_point TYPE="method" FQNAME="com.beastcode.SQLiteDB java.util.List&lt;java.lang.String&gt; getAllItemsRequested()" />
+      <entry_point TYPE="method" FQNAME="com.beastcode.SQLiteDB java.util.List&lt;com.beastcode.ItemRequest&gt; getAllItemsRequestedITEM()" />
+      <entry_point TYPE="method" FQNAME="com.beastcode.SQLiteDB void clearDatabase()" />
+      <entry_point TYPE="method" FQNAME="com.beastcode.SQLiteDB void clearUsers()" />
+      <entry_point TYPE="method" FQNAME="com.beastcode.SQLiteDB void clearItemsRequested()" />
+      <entry_point TYPE="method" FQNAME="com.beastcode.SQLiteDB void clearReports()" />
+      <entry_point TYPE="method" FQNAME="com.beastcode.SQLiteDB boolean checkUser(java.lang.String username)" />
+      <entry_point TYPE="method" FQNAME="com.beastcode.SQLiteDB void addFriend(com.beastcode.User base, com.beastcode.User friend)" />
+      <entry_point TYPE="method" FQNAME="com.beastcode.SQLiteDB void addFriendOther(com.beastcode.User base, com.beastcode.User friend)" />
+      <entry_point TYPE="method" FQNAME="com.beastcode.SQLiteDB java.util.List&lt;com.beastcode.User&gt; getAllFriends(com.beastcode.User user)" />
+      <entry_point TYPE="method" FQNAME="com.beastcode.SQLiteDB void deleteFriend(com.beastcode.User user, com.beastcode.User friend)" />
+      <entry_point TYPE="method" FQNAME="com.beastcode.SQLiteDB void deleteFriendOther(com.beastcode.User user, com.beastcode.User friend)" />
+      <entry_point TYPE="method" FQNAME="com.beastcode.SQLiteDB void addItemRequest(com.beastcode.ItemRequest item)" />
+      <entry_point TYPE="method" FQNAME="com.beastcode.SQLiteDB java.util.List&lt;com.beastcode.ItemRequest&gt; getRequestsByUser(com.beastcode.User user)" />
+      <entry_point TYPE="method" FQNAME="com.beastcode.SQLiteDB void addItemReport(com.beastcode.ItemRequest item)" />
+      <entry_point TYPE="method" FQNAME="com.beastcode.SQLiteDB java.util.List&lt;com.beastcode.ItemRequest&gt; getAllReportsITEM()" />
+      <entry_point TYPE="field" FQNAME="com.beastcode.YourProfileActivity id" />
+      <entry_point TYPE="method" FQNAME="com.beastcode.YourProfileActivity void displayFriends()" />
+      <entry_point TYPE="method" FQNAME="com.beastcode.YourProfileActivity void displayNotFriends()" />
+      <entry_point TYPE="method" FQNAME="com.beastcode.YourProfileActivity void displayRequestedItems()" />
+      <entry_point TYPE="method" FQNAME="com.beastcode.Login void addEmailsToAutoComplete(java.util.List&lt;java.lang.String&gt; emailAddressCollection)" />
     </entry_points>
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">

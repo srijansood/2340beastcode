@@ -30,7 +30,8 @@
         android:onClick="gotoWelcomeScreen"
         android:layout_below="@+id/email_sign_in_button"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        tools:ignore="ButtonOrder,HardcodedText" />
 
     <Button android:id="@+id/email_sign_in_button" style="?android:textAppearanceSmall"
         android:layout_width="match_parent" android:layout_height="wrap_content"

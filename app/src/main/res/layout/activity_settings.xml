@@ -15,7 +15,8 @@
         android:onClick="databaseContents"
         android:layout_alignTop="@+id/clearDatabase"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        tools:ignore="HardcodedText" />
 
     <Button
         android:layout_width="wrap_content"
