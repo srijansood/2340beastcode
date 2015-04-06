@@ -9,19 +9,10 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.TextView;
-
-import com.beastcode.R;
-
 import java.util.ArrayList;
 import java.util.List;
 
-
 public class FriendsList extends ActionBarActivity {
-
-    private List nameList = new ArrayList();
-    private List<User> userList;
-    private List<Integer> userIDList;
 
     /**
      * method for on Create that gets the list of your friends from the database and gives the
@@ -40,9 +31,11 @@ public class FriendsList extends ActionBarActivity {
         List nameList = new ArrayList();
 
         for (User user : friendList) {
+            //noinspection unchecked
             nameList.add(user.getName());
         }
 
+        //noinspection unchecked
         ArrayAdapter mAdapter = new ArrayAdapter<User>(
                 this,
                 android.R.layout.simple_list_item_activated_1,
@@ -73,13 +66,12 @@ public class FriendsList extends ActionBarActivity {
      * position of the item that you clicked on
      * @param position position tells us the position of the item clicked
      */
-    public void friendDetails(int position) {
+    void friendDetails(int position) {
         Intent i = new Intent(getApplicationContext(), FriendDetails.class);
         i.putExtra("Position", position);
         startActivity(i);
         finish();
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -87,8 +79,6 @@ public class FriendsList extends ActionBarActivity {
         getMenuInflater().inflate(R.menu.friends, menu);
         return true;
     }
-
-
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -113,7 +103,7 @@ public class FriendsList extends ActionBarActivity {
     /**
      * method for the menu so when Friends is clicked it opens up the FriendsList activity
      */
-    public void displayFriends() {
+    void displayFriends() {
         Intent intent = new Intent(this, FriendsList.class);
         startActivity(intent);
         finish();
@@ -122,7 +112,7 @@ public class FriendsList extends ActionBarActivity {
     /**
      * method for the menu so when Add Friends is clicked, it opens up the notFriendsListActivity.
      */
-    public void displayNotFriends() {
+    void displayNotFriends() {
         // display the list of people who are not your friends so you can add them
         Intent intent = new Intent(this, notFriendsListActivity.class);
         startActivity(intent);
