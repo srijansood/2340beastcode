@@ -21,7 +21,7 @@ public class RequestedItemsList extends ActionBarActivity {
     /**
      * onCreate method that takes in the list of items and puts them into a list view
      * then allows you to click on the item in the list.
-     * @param savedInstanceState
+     * @param savedInstanceState default
      */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,7 +37,7 @@ public class RequestedItemsList extends ActionBarActivity {
 
         db.close();
 
-        ArrayAdapter adapter = new ArrayAdapter<String>(
+        ArrayAdapter adapter = new ArrayAdapter<>(
                 this,
                 android.R.layout.simple_list_item_activated_1,
                 android.R.id.text1,
@@ -68,7 +68,7 @@ public class RequestedItemsList extends ActionBarActivity {
      * method that opens up the details of the item in the list that you selected
      * @param position position in the list of the item that you touched
      */
-    public void requestedItemDetail(int position) {
+    void requestedItemDetail(int position) {
 //        Message.message(this, "" + position);
         Intent i = new Intent(getApplicationContext(), ItemRequestDetails.class);
         i.putExtra("Position", position);
