@@ -6,7 +6,6 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.EditText;
 
 import com.beastcode.R;
@@ -16,11 +15,10 @@ public class ReportingSaleActivity extends ActionBarActivity {
 
     private EditText itemName, price;
     private int id;
-    private User requester;
-    SharedPreferences prefs = null;
+    private SharedPreferences prefs = null;
 
     /**
-     * onCreate Overrride that is for reporting a sale
+     * onCreate Override that is for reporting a sale
      * @param savedInstanceState bundle!
      */
     @Override
@@ -41,18 +39,16 @@ public class ReportingSaleActivity extends ActionBarActivity {
 
     /**
      * method that adds a pin when a place on the map is clicked on
-     * @param view view
      */
-    public void addPinMap(View view) {
+    public void addPinMap() {
         Intent intent = new Intent(this, MapsActivity.class);
         startActivity(intent);
     }
 
     /**
      * submit button that allows for the item to be put into the database
-     * @param view view
      */
-    public void submitReport(View view) {
+    public void submitReport() {
         String rsName = itemName.getText().toString();
         String rsPriceCheck = price.getText().toString();
         int rsPrice = 0;
@@ -76,13 +72,13 @@ public class ReportingSaleActivity extends ActionBarActivity {
             price.setError("Must specify a location");
         } else {
             SQLiteDB db = new SQLiteDB(this);
-            requester = db.getUser(id);
+            User requester = db.getUser(id);
 
             String lat = prefs.getString("Lat", "");
             String lng = prefs.getString("Lng", "");
 //            Message.message(this, lat + " " + lng);
             String location = (lat + " " + lng);
-            prefs.edit().clear().commit();
+            prefs.edit().clear().apply();
 
             ItemRequest item = new ItemRequest(requester, rsName, rsPrice, location);
             db.addItemReport(item);
