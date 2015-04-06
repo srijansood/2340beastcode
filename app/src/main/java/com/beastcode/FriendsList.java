@@ -44,7 +44,7 @@ public class FriendsList extends ActionBarActivity {
         for (User user : friendList) {
             nameList.add(user.getName());
         }
-//        Message.message(this, idArray.toString());
+
         mAdapter = new ArrayAdapter<User>(
                 this,
                 android.R.layout.simple_list_item_activated_1,
@@ -63,9 +63,6 @@ public class FriendsList extends ActionBarActivity {
              * @param id id...
              */
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                // When clicked, show a toast with the TextView text or do whatever you need.
-//                Toast.makeText(getApplicationContext(), ((TextView) view).getText(), Toast.LENGTH_SHORT).show();
-                //adds the user to the database as a friend of the current user
                 String username = ((TextView) view).getText().toString();
                 friendDetails(position);
 
@@ -80,10 +77,8 @@ public class FriendsList extends ActionBarActivity {
      * @param position
      */
     public void friendDetails(int position) {
-//        Message.message(this, "" + position);
         Intent i = new Intent(getApplicationContext(), FriendDetails.class);
         i.putExtra("Position", position);
-//        i.putExtra("Letters", "hello");
         startActivity(i);
         finish();
     }
@@ -104,13 +99,6 @@ public class FriendsList extends ActionBarActivity {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-//        if (id == R.id.action_settings) {
-//            return true;
-//        }
-
-//        return super.onOptionsItemSelected(item);
 
         switch (item.getItemId()) {
             case R.id.action_friends:
