@@ -45,7 +45,7 @@ public class ItemRequest {
     }
 
     /**
-     * getter for the requestor
+     * getter for the requester
      * @return user who is requesting
      */
     public User getRequester() {
