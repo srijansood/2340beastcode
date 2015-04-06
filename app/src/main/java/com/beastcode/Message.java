@@ -6,6 +6,7 @@ import android.widget.Toast;
 /**
  * Created by Adway on 2/26/2015.
  */
+@SuppressWarnings("DefaultFileTemplate")
 public class Message {
     /**
      * method that creates a toast message.
