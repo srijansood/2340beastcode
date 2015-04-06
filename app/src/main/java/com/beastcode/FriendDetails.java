@@ -7,8 +7,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 
-import com.beastcode.R;
-
 import java.util.List;
 
 
@@ -35,12 +33,10 @@ public class FriendDetails extends ActionBarActivity {
         int id = userID.getId();
         db1.close();
 
-//        String letters = extras.getString("Letters");
-//        Message.message(this, "the id on the detail page " + id);
         SQLiteDB db = new SQLiteDB(this);
         user = db.getUser(id);
         db.close();
-//
+
         ((TextView) findViewById(R.id.fDetailsName)).setText(user.getUsername());
         ((TextView) findViewById(R.id.fDetailsEmail)).setText(user.getEmail());
         ((TextView) findViewById(R.id.fDetailsRating)).setText("" + user.getRating());
