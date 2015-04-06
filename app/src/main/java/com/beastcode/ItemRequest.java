@@ -111,5 +111,4 @@ public class ItemRequest {
         this.location = loc;
     }
 
-
 }
