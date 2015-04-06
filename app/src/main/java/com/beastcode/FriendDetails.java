@@ -5,6 +5,7 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.TextView;
 
 import java.util.List;
@@ -110,5 +111,8 @@ public class FriendDetails extends ActionBarActivity {
         Intent intent = new Intent(this, notFriendsListActivity.class);
         startActivity(intent);
         finish();
+    }
+
+    public void removeFriend(View view) {
     }
 }

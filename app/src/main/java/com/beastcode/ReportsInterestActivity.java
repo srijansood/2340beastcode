@@ -113,4 +113,7 @@ public class ReportsInterestActivity extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+    public void continueToProfile(View view) {
+    }
 }

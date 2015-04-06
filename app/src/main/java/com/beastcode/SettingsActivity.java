@@ -4,6 +4,7 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.beastcode.R;
 
@@ -100,5 +101,29 @@ public class SettingsActivity extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void databaseContents(View view) {
+    }
+
+    public void clearDatabase(View view) {
+    }
+
+    public void showItemsRequested(View view) {
+    }
+
+    public void clearUsersAndFriends(View view) {
+    }
+
+    public void clearItemsRequested(View view) {
+    }
+
+    public void showFriends(View view) {
+    }
+
+    public void clearReports(View view) {
+    }
+
+    public void showReports(View view) {
     }
 }

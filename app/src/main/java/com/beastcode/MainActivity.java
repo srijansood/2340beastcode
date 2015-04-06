@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.beastcode.R;
 
@@ -75,5 +76,11 @@ public class MainActivity extends ActionBarActivity {
     void settings() {
         Intent intent = new Intent(this, SettingsActivity.class);
         startActivity(intent);
+    }
+
+    public void loginScreen(View view) {
+    }
+
+    public void registerScreen(View view) {
     }
 }

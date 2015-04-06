@@ -243,6 +243,9 @@ public class Login extends Activity implements LoaderManager.LoaderCallbacks<Cur
 
     }
 
+    public void gotoWelcomeScreen(View view) {
+    }
+
     /**
      * Responsible for profile queries
      */
