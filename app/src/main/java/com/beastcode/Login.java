@@ -2,7 +2,6 @@ package com.beastcode;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
-import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.LoaderManager;
@@ -24,9 +23,6 @@ import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-
-import com.beastcode.R;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -41,8 +37,8 @@ public class Login extends Activity implements LoaderManager.LoaderCallbacks<Cur
     private View mLoginFormView;
 
     private List<User> users;
-    SQLiteDB db;
-    ArrayList<String> askInterest;
+    private SQLiteDB db;
+    private ArrayList<String> askInterest;
 
     /**
      * onCreate that handles the login
@@ -56,9 +52,7 @@ public class Login extends Activity implements LoaderManager.LoaderCallbacks<Cur
         // Set up the login form.
         mUsernameView = (AutoCompleteTextView) findViewById(R.id.username);
         mUsernameView.requestFocus();
-
         populateAutoComplete();
-
         mPasswordView = (EditText) findViewById(R.id.password);
         mPasswordView.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
@@ -70,10 +64,8 @@ public class Login extends Activity implements LoaderManager.LoaderCallbacks<Cur
                 return false;
             }
         });
-
         db = new SQLiteDB(this);
         users = db.getAllUsers();
-
         Button mEmailSignInButton = (Button) findViewById(R.id.email_sign_in_button);
         mEmailSignInButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -81,16 +73,14 @@ public class Login extends Activity implements LoaderManager.LoaderCallbacks<Cur
                 attemptLogin();
             }
         });
-
         mLoginFormView = findViewById(R.id.login_form);
         mProgressView = findViewById(R.id.login_progress);
     }
 
     /**
-     * method that is called when you want to go back to the welcomescreen
-     * @param view View
+     * method that is called when you want to go back to the welcome screen
      */
-    public void gotoWelcomeScreen(View view) {
+    public void gotoWelcomeScreen() {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
         finish();
@@ -108,7 +98,7 @@ public class Login extends Activity implements LoaderManager.LoaderCallbacks<Cur
      * If there are form errors (invalid email, missing fields, etc.), the
      * errors are presented and no actual login attempt is made.
      */
-    public void attemptLogin() {
+    void attemptLogin() {
         if (mAuthTask != null) {
             return;
         }
@@ -126,7 +116,7 @@ public class Login extends Activity implements LoaderManager.LoaderCallbacks<Cur
 
 
         // Check for a valid password, if the user entered one.
-        if (!TextUtils.isEmpty(password) && !isPasswordValid(password)) {
+        if (!TextUtils.isEmpty(password) && isPasswordValid(password)) {
             mPasswordView.setError("Incorrect Password");
             focusView = mPasswordView;
             cancel = true;
@@ -146,7 +136,7 @@ public class Login extends Activity implements LoaderManager.LoaderCallbacks<Cur
             mPasswordView.setError("Error password Required");
             focusView = mPasswordView;
             cancel = true;
-        } else if (!isPasswordValid(password)) {
+        } else if (isPasswordValid(password)) {
             mPasswordView.setError("Error Invalid Password");
             focusView = mPasswordView;
             cancel = true;
@@ -181,42 +171,41 @@ public class Login extends Activity implements LoaderManager.LoaderCallbacks<Cur
      * @return if it is a valid length or not
      */
     private boolean isPasswordValid(String password) {
-        return password.length() > 0;
+        return password.length() <= 0;
     }
 
     /**
      * Shows the progress UI and hides the login form.
      */
-    @TargetApi(Build.VERSION_CODES.HONEYCOMB_MR2)
-    public void showProgress(final boolean show) {
+    void showProgress() {
         // On Honeycomb MR2 we have the ViewPropertyAnimator APIs, which allow
         // for very easy animations. If available, use these APIs to fade-in
         // the progress spinner.
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB_MR2) {
             int shortAnimTime = getResources().getInteger(android.R.integer.config_shortAnimTime);
 
-            mLoginFormView.setVisibility(show ? View.GONE : View.VISIBLE);
+            mLoginFormView.setVisibility(View.VISIBLE);
             mLoginFormView.animate().setDuration(shortAnimTime).alpha(
-                    show ? 0 : 1).setListener(new AnimatorListenerAdapter() {
+                    1).setListener(new AnimatorListenerAdapter() {
                 @Override
                 public void onAnimationEnd(Animator animation) {
-                    mLoginFormView.setVisibility(show ? View.GONE : View.VISIBLE);
+                    mLoginFormView.setVisibility(View.VISIBLE);
                 }
             });
 
-            mProgressView.setVisibility(show ? View.VISIBLE : View.GONE);
+            mProgressView.setVisibility(View.GONE);
             mProgressView.animate().setDuration(shortAnimTime).alpha(
-                    show ? 1 : 0).setListener(new AnimatorListenerAdapter() {
+                    0).setListener(new AnimatorListenerAdapter() {
                 @Override
                 public void onAnimationEnd(Animator animation) {
-                    mProgressView.setVisibility(show ? View.VISIBLE : View.GONE);
+                    mProgressView.setVisibility(View.GONE);
                 }
             });
         } else {
             // The ViewPropertyAnimator APIs are not available, so simply show
             // and hide the relevant UI components.
-            mProgressView.setVisibility(show ? View.VISIBLE : View.GONE);
-            mLoginFormView.setVisibility(show ? View.GONE : View.VISIBLE);
+            mProgressView.setVisibility(View.GONE);
+            mLoginFormView.setVisibility(View.VISIBLE);
         }
     }
 
@@ -239,7 +228,7 @@ public class Login extends Activity implements LoaderManager.LoaderCallbacks<Cur
 
     @Override
     public void onLoadFinished(Loader<Cursor> cursorLoader, Cursor cursor) {
-        List<String> emails = new ArrayList<String>();
+        List<String> emails = new ArrayList<>();
         cursor.moveToFirst();
         while (!cursor.isAfterLast()) {
             emails.add(cursor.getString(ProfileQuery.ADDRESS));
@@ -255,7 +244,7 @@ public class Login extends Activity implements LoaderManager.LoaderCallbacks<Cur
     }
 
     /**
-     * profilequery
+     * Responsible for profile queries
      */
     private interface ProfileQuery {
         String[] PROJECTION = {
@@ -275,7 +264,7 @@ public class Login extends Activity implements LoaderManager.LoaderCallbacks<Cur
     private void addEmailsToAutoComplete(List<String> emailAddressCollection) {
         //Create adapter to tell the AutoCompleteTextView what to show in its dropdown list.
         ArrayAdapter<String> adapter =
-                new ArrayAdapter<String>(Login.this,
+                new ArrayAdapter<>(Login.this,
                         android.R.layout.simple_dropdown_item_1line, emailAddressCollection);
 
         mUsernameView.setAdapter(adapter);
@@ -315,21 +304,19 @@ public class Login extends Activity implements LoaderManager.LoaderCallbacks<Cur
             }
         }
         if (!valid) {
-//            Message.message(this, "Invalid Credentials");
             AlertDialog.Builder builder = new AlertDialog.Builder(Login.this);
             builder.setMessage("Invalid Username or Password!");
             builder.setCancelable(true);
             AlertDialog dialog = builder.create();
             dialog.show();
         }
-
     }
 
     /**
-     * method to determine if the interst form should be shown before your profile is.
-     * @param currentUser
+     * method to determine if the interest form should be shown before your profile is.
+     * @param currentUser the user who's profile has been selected
      */
-    public boolean launchInterest(User currentUser) {
+    boolean launchInterest(User currentUser) {
 //        Message.message(this, currentUser.getName() + " is the current user");
         List<ItemRequest> items = db.getRequestsByUser(currentUser);
         List<ItemRequest> reports = db.getAllReportsITEM();
@@ -345,11 +332,7 @@ public class Login extends Activity implements LoaderManager.LoaderCallbacks<Cur
             }
         }
 //        Message.message(this, suggest);
-        if (askInterest.isEmpty()) {
-            return false;
-        } else {
-            return true;
-        }
+        return !askInterest.isEmpty();
     }
 
     /**
@@ -365,8 +348,6 @@ public class Login extends Activity implements LoaderManager.LoaderCallbacks<Cur
             mUsername = username;
             mPassword = password;
         }
-
-
 
         @Override
         protected Boolean doInBackground(Void... params) {
@@ -384,7 +365,6 @@ public class Login extends Activity implements LoaderManager.LoaderCallbacks<Cur
                         return false;
                 }
             }
-
             // TODO: register the new account here.
             return false;
         }
@@ -393,7 +373,7 @@ public class Login extends Activity implements LoaderManager.LoaderCallbacks<Cur
         @Override
         protected void onPostExecute(final Boolean success) {
             mAuthTask = null;
-            showProgress(false);
+            showProgress();
             if (success) {
                 finish();
                 Intent intent = new Intent(Login.this, YourProfileActivity.class);
@@ -409,7 +389,7 @@ public class Login extends Activity implements LoaderManager.LoaderCallbacks<Cur
         @Override
         protected void onCancelled() {
             mAuthTask = null;
-            showProgress(false);
+            showProgress();
         }
     }
 }
