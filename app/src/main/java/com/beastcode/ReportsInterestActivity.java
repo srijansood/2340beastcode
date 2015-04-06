@@ -22,12 +22,11 @@ public class ReportsInterestActivity extends ActionBarActivity {
 
     private int id;
     private String username;
-    private ArrayAdapter mAdapter;
 
     /**
      * onCreate method that goes and gets the items that match your requested items
      * and are less than the max price you have and display them in a list.
-     * @param savedInstanceState
+     * @param savedInstanceState default
      */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,7 +50,7 @@ public class ReportsInterestActivity extends ActionBarActivity {
             }
         }
 
-        mAdapter = new ArrayAdapter<String>(
+        ArrayAdapter mAdapter = new ArrayAdapter<>(
                 this,
                 android.R.layout.simple_list_item_activated_1,
                 android.R.id.text1,
@@ -72,7 +71,7 @@ public class ReportsInterestActivity extends ActionBarActivity {
                 // When clicked, show a toast with the TextView text or do whatever you need.
                 Toast.makeText(getApplicationContext(), ((TextView) view).getText(), Toast.LENGTH_SHORT).show();
                 //adds the user to the database as a friend of the current user
-                String username = ((TextView) view).getText().toString();
+                @SuppressWarnings("UnusedAssignment") String username = ((TextView) view).getText().toString();
 
 
             }
@@ -82,9 +81,8 @@ public class ReportsInterestActivity extends ActionBarActivity {
     /**
      * continueToProfile method which is just for the button so you can move onto your
      * profile if you don't see anything that you like
-     * @param view view
      */
-    public void continueToProfile(View view) {
+    public void continueToProfile() {
         Intent intent = new Intent(this, YourProfileActivity.class);
         intent.putExtra("Username", username);
         intent.putExtra("identification", id);
