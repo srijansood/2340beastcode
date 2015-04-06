@@ -22,7 +22,7 @@ public class notFriendsListActivity extends ActionBarActivity {
 
 
     private static final String STATE_ACTIVATED_POSITION = "activated_position";
-    private List nameList = new ArrayList();
+    private final List nameList = new ArrayList();
     private List<User> userList;
     private ArrayAdapter mAdapter;
 
@@ -46,10 +46,12 @@ public class notFriendsListActivity extends ActionBarActivity {
 
         for (User user : list) {
             if (!user.equals(User.currentUser) && !friendList.contains(user)) {
+                //noinspection unchecked
                 nameList.add(user.getName());
             } else
                 userList.remove(user); //removes the irrelevant user
         }
+        //noinspection unchecked
         mAdapter = new ArrayAdapter<User>(
                 this,
                 android.R.layout.simple_list_item_activated_1,
@@ -75,7 +77,7 @@ public class notFriendsListActivity extends ActionBarActivity {
      * list
      * @param position the position of the list they were in.
      */
-    public void addToFriendList(int position) {
+    void addToFriendList(int position) {
         SQLiteDB db = new SQLiteDB(this);
         db.addFriend(User.currentUser, userList.get(position));
         db.close();
@@ -97,7 +99,7 @@ public class notFriendsListActivity extends ActionBarActivity {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
+        @SuppressWarnings("UnusedAssignment") int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
 //        if (id == R.id.action_settings) {
@@ -123,7 +125,7 @@ public class notFriendsListActivity extends ActionBarActivity {
     /**
      * method for the menu so when Friends is clicked it opens up the FriendsList activity
      */
-    public void displayFriends() {
+    void displayFriends() {
         Intent intent = new Intent(this, FriendsList.class);
         //username = "dummy";
 //        intent.putExtra(username);
@@ -134,7 +136,7 @@ public class notFriendsListActivity extends ActionBarActivity {
     /**
      * method for the menu so when Add Friends is clicked, it opens up the notFriendsListActivity.
      */
-    public void displayNotFriends() {
+    void displayNotFriends() {
         // display the list of people who are not your friends so you can add them
         Intent intent = new Intent(this, notFriendsListActivity.class);
         startActivity(intent);
