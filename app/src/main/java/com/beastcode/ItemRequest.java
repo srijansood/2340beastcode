@@ -1,9 +1,5 @@
 package com.beastcode;
 
-/**
- * Created by Adway on 2/27/2015.
- */
-
 public class ItemRequest {
 
     private int requestId;
