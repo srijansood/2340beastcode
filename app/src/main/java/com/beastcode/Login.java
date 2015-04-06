@@ -244,7 +244,7 @@ public class Login extends Activity implements LoaderManager.LoaderCallbacks<Cur
     }
 
     @SuppressWarnings("EmptyMethod")
-    public void gotoWelcomeScreen(View view) {
+    public void gotoWelcomeScreen() {
     }
 
     /**

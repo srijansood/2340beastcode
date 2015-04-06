@@ -79,10 +79,10 @@ public class MainActivity extends ActionBarActivity {
     }
 
     @SuppressWarnings("EmptyMethod")
-    public void loginScreen(View view) {
+    public void loginScreen() {
     }
 
     @SuppressWarnings("EmptyMethod")
-    public void registerScreen(View view) {
+    public void registerScreen() {
     }
 }

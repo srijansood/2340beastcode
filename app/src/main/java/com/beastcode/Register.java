@@ -131,10 +131,10 @@ public class Register extends ActionBarActivity {
     }
 
     @SuppressWarnings("EmptyMethod")
-    public void addUser(View view) {
+    public void addUser() {
     }
 
     @SuppressWarnings("EmptyMethod")
-    public void cancel(View view) {
+    public void cancel() {
     }
 }

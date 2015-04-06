@@ -104,6 +104,6 @@ public class RequestItemActivity extends ActionBarActivity {
     }
 
     @SuppressWarnings("EmptyMethod")
-    public void submitItemRequest(View view) {
+    public void submitItemRequest() {
     }
 }

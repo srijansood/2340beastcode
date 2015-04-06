@@ -116,10 +116,10 @@ public class ReportingSaleActivity extends ActionBarActivity {
     }
 
     @SuppressWarnings("EmptyMethod")
-    public void submitReport(View view) {
+    public void submitReport() {
     }
 
     @SuppressWarnings("EmptyMethod")
-    public void addPinMap(View view) {
+    public void addPinMap() {
     }
 }

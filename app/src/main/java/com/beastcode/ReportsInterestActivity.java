@@ -115,6 +115,6 @@ public class ReportsInterestActivity extends ActionBarActivity {
     }
 
     @SuppressWarnings("EmptyMethod")
-    public void continueToProfile(View view) {
+    public void continueToProfile() {
     }
 }

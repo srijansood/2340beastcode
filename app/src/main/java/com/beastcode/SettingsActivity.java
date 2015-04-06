@@ -124,14 +124,14 @@ public class SettingsActivity extends ActionBarActivity {
     }
 
     @SuppressWarnings("EmptyMethod")
-    public void showFriends(View view) {
+    public void showFriends() {
     }
 
     @SuppressWarnings("EmptyMethod")
-    public void clearReports(View view) {
+    public void clearReports() {
     }
 
     @SuppressWarnings("EmptyMethod")
-    public void showReports(View view) {
+    public void showReports() {
     }
 }
