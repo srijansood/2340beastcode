@@ -1,8 +1,6 @@
 package com.beastcode;
 
-/**
- * Created by Adam on 2/26/2015.
- */
+
 public class User {
     private int id;
     private String name;
@@ -36,15 +34,15 @@ public class User {
 
     /**
      * constructs a user from the database
-     * @param id
-     * @param name
-     * @param username
-     * @param pw
-     * @param email
-     * @param rating
-     * @param numReports
-     * @param isLocked
-     * @param isAdmin
+     * @param id unique int id
+     * @param name String name
+     * @param username String username
+     * @param pw String password
+     * @param email string email
+     * @param rating avg rating
+     * @param numReports number of reports
+     * @param isLocked int representing boolean
+     * @param isAdmin int representing boolean
      */
     public User(int id, String name, String username, String pw, String email, int rating,
                 int numReports, int isLocked, int isAdmin) {
