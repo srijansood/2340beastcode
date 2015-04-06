@@ -1,5 +1,6 @@
 package com.beastcode;
 
+import android.annotation.SuppressLint;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
@@ -9,9 +10,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by Adway on 2/26/2015.
- */
+
 public class SQLiteDB extends SQLiteOpenHelper {
 
     // All Static variables
@@ -59,7 +58,7 @@ public class SQLiteDB extends SQLiteOpenHelper {
 
     /**
      * Creates databases with two tables
-     * @param db
+     * @param db database
      */
     @Override
     public void onCreate(SQLiteDatabase db) {
@@ -131,7 +130,7 @@ public class SQLiteDB extends SQLiteOpenHelper {
 //-------------------------------------------------------------------------------------------------
     /**
      * returns user from id
-     * @param id
+     * @param id user ID
      * @return user
      */
     public User getUser(int id) {
@@ -144,6 +143,7 @@ public class SQLiteDB extends SQLiteOpenHelper {
         if (cursor != null)
             cursor.moveToFirst();
 
+        assert cursor != null;
         User user = new User(Integer.parseInt(cursor.getString(0)),
                 cursor.getString(1), cursor.getString(2), cursor.getString(3), cursor.getString(4),
                 Integer.parseInt(cursor.getString(5)), Integer.parseInt(cursor.getString(6)),
@@ -165,7 +165,7 @@ public class SQLiteDB extends SQLiteOpenHelper {
         String selectQuery = "SELECT  * FROM " + TABLE_USERS;
 
         SQLiteDatabase db = this.getWritableDatabase();
-        Cursor cursor = db.rawQuery(selectQuery, null);
+        @SuppressLint("Recycle") Cursor cursor = db.rawQuery(selectQuery, null);
 
         // looping through all rows and adding to list
         if (cursor.moveToFirst()) {
@@ -196,8 +196,8 @@ public class SQLiteDB extends SQLiteOpenHelper {
     public String getAllUsersString() {
         SQLiteDatabase db = this.getWritableDatabase();
         String[] columns = {KEY_ID, KEY_NAME, KEY_UN, KEY_EMAIL, KEY_PW};
-        Cursor cursor = db.query(TABLE_USERS, columns, null, null, null, null, null);
-        StringBuffer buffer = new StringBuffer();
+        @SuppressLint("Recycle") Cursor cursor = db.query(TABLE_USERS, columns, null, null, null, null, null);
+        StringBuilder buffer = new StringBuilder();
         while (cursor.moveToNext()) {
             int cid = cursor.getInt(0);
             String name = cursor.getString(1);
@@ -205,7 +205,7 @@ public class SQLiteDB extends SQLiteOpenHelper {
             String email = cursor.getString(3);
             String password = cursor.getString(4);
 
-            buffer.append(cid + ") " + name + " " + username + " " + email + " " + password + "\n");
+            buffer.append(cid).append(") ").append(name).append(" ").append(username).append(" ").append(email).append(" ").append(password).append("\n");
         }
         return buffer.toString();
     }
@@ -217,15 +217,15 @@ public class SQLiteDB extends SQLiteOpenHelper {
     public String getAllItemsString() {
         SQLiteDatabase db = this.getWritableDatabase();
         String[] columns = {KEY_UID, KEY_ITEM_NAME, KEY_MAX_PRICE, KEY_LOCATION};
-        Cursor cursor = db.query(TABLE_ITEMS, columns, null, null, null, null, null);
-        StringBuffer buffer = new StringBuffer();
+        @SuppressLint("Recycle") Cursor cursor = db.query(TABLE_ITEMS, columns, null, null, null, null, null);
+        StringBuilder buffer = new StringBuilder();
         while (cursor.moveToNext()) {
             int requesterID = cursor.getInt(0);
             String itemName = cursor.getString(1);
             String maxPrice = cursor.getString(2);
             String location = cursor.getString(3);
 
-            buffer.append(requesterID + " " + itemName + " " + maxPrice + " " + location +  "\n");
+            buffer.append(requesterID).append(" ").append(itemName).append(" ").append(maxPrice).append(" ").append(location).append("\n");
         }
         return buffer.toString();
     }
@@ -237,34 +237,34 @@ public class SQLiteDB extends SQLiteOpenHelper {
     public String getAllReportsString() {
         SQLiteDatabase db = this.getWritableDatabase();
         String[] columns = {KEY_UID, KEY_ITEM_NAME, KEY_MAX_PRICE, KEY_LOCATION};
-        Cursor cursor = db.query(TABLE_REPORTS, columns, null, null, null, null, null);
-        StringBuffer buffer = new StringBuffer();
+        @SuppressLint("Recycle") Cursor cursor = db.query(TABLE_REPORTS, columns, null, null, null, null, null);
+        StringBuilder buffer = new StringBuilder();
         while (cursor.moveToNext()) {
             int requesterID = cursor.getInt(0);
             String itemName = cursor.getString(1);
             String maxPrice = cursor.getString(2);
             String location = cursor.getString(3);
 
-            buffer.append(requesterID + " " + itemName + " " + maxPrice + " " + location +  "\n");
+            buffer.append(requesterID).append(" ").append(itemName).append(" ").append(maxPrice).append(" ").append(location).append("\n");
         }
         return buffer.toString();
     }
 //-------------------------------------------------------------------------------------------------
     /**
      * get all the friends
-     * @return
+     * @return String of friends
      */
     public String getAllFriendsString() {
         SQLiteDatabase db = this.getWritableDatabase();
         String[] columns = {KEY_ID, KEY_BASE, KEY_FRIEND};
-        Cursor cursor = db.query(TABLE_FRIENDS, columns, null, null, null, null, null);
-        StringBuffer buffer = new StringBuffer();
+        @SuppressLint("Recycle") Cursor cursor = db.query(TABLE_FRIENDS, columns, null, null, null, null, null);
+        StringBuilder buffer = new StringBuilder();
         while (cursor.moveToNext()) {
             int key = cursor.getInt(0);
             String base = cursor.getString(1);
             String friend = cursor.getString(2);
 
-            buffer.append(key + " " + base + " " + friend + "\n");
+            buffer.append(key).append(" ").append(base).append(" ").append(friend).append("\n");
         }
         return buffer.toString();
     }
@@ -280,7 +280,7 @@ public class SQLiteDB extends SQLiteOpenHelper {
 
         SQLiteDatabase db = this.getWritableDatabase();
         String[] columns = {KEY_UID, KEY_ITEM_NAME, KEY_MAX_PRICE, KEY_LOCATION};
-        Cursor cursor = db.query(TABLE_ITEMS, columns, null, null, null, null, null);
+        @SuppressLint("Recycle") Cursor cursor = db.query(TABLE_ITEMS, columns, null, null, null, null, null);
 
         while (cursor.moveToNext()) {
 //            int requesterID = cursor.getInt(0);
@@ -296,7 +296,7 @@ public class SQLiteDB extends SQLiteOpenHelper {
 
     /**
      * method that gets the items and returns them in a list of item request.
-     * @return list of itmes in the itemrequest format
+     * @return list of items in the itemrequest format
      */
     public List<ItemRequest> getAllItemsRequestedITEM() {
         List<ItemRequest> itemList = new ArrayList<>();
@@ -304,7 +304,7 @@ public class SQLiteDB extends SQLiteOpenHelper {
         String selectQuery = "SELECT  * FROM " + TABLE_ITEMS;
 
         SQLiteDatabase db = this.getWritableDatabase();
-        Cursor cursor = db.rawQuery(selectQuery, null);
+        @SuppressLint("Recycle") Cursor cursor = db.rawQuery(selectQuery, null);
 
         // looping through all rows and adding to list
         if (cursor.moveToFirst()) {
@@ -591,7 +591,7 @@ public class SQLiteDB extends SQLiteOpenHelper {
      * @param user user to be deleted
      * @param friend friend to be deleted
      */
-    public void deleteFriendOther(User user, User friend) {
+    void deleteFriendOther(User user, User friend) {
         SQLiteDatabase db = this.getWritableDatabase();
         db.delete(TABLE_FRIENDS, KEY_BASE + " = ? AND " + KEY_FRIEND + " = ?",
                 new String[] { String.valueOf(user.getId()), String.valueOf(friend.getId()) });
@@ -632,6 +632,7 @@ public class SQLiteDB extends SQLiteOpenHelper {
         if (cursor != null)
             cursor.moveToFirst();
 
+        assert cursor != null;
         ItemRequest item = new ItemRequest(getUser(Integer.parseInt(cursor.getString(1))),
                 cursor.getString(2), Integer.parseInt(cursor.getString(3)), cursor.getString(4));
 
@@ -721,7 +722,7 @@ public class SQLiteDB extends SQLiteOpenHelper {
 
         SQLiteDatabase db = this.getWritableDatabase();
         String[] columns = {KEY_UID, KEY_ITEM_NAME, KEY_MAX_PRICE, KEY_LOCATION};
-        Cursor cursor = db.query(TABLE_REPORTS, columns, null, null, null, null, null);
+        @SuppressLint("Recycle") Cursor cursor = db.query(TABLE_REPORTS, columns, null, null, null, null, null);
 
         while (cursor.moveToNext()) {
 //            int requesterID = cursor.getInt(0);
@@ -737,7 +738,7 @@ public class SQLiteDB extends SQLiteOpenHelper {
 
     /**
      * method that gets the items and returns them in a list of item request.
-     * @return list of itmes in the itemrequest format
+     * @return list of items in the itemrequest format
      */
     public List<ItemRequest> getAllReportsITEM() {
         List<ItemRequest> itemList = new ArrayList<>();
@@ -745,7 +746,7 @@ public class SQLiteDB extends SQLiteOpenHelper {
         String selectQuery = "SELECT  * FROM " + TABLE_REPORTS;
 
         SQLiteDatabase db = this.getWritableDatabase();
-        Cursor cursor = db.rawQuery(selectQuery, null);
+        @SuppressLint("Recycle") Cursor cursor = db.rawQuery(selectQuery, null);
 
         // looping through all rows and adding to list
         if (cursor.moveToFirst()) {
