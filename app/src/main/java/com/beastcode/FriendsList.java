@@ -34,18 +34,6 @@ public class FriendsList extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_friends_list);
 
-//        String[] myStringArray = {"THEST", " TEST2"};
-//        ArrayAdapter<String> myAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, myStringArray);
-//        ListView myList = (ListView) findViewById(R.id.friendsList);
-//        myList.setAdapter(myAdapter);
-//        myList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-//            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-//                // When clicked, show a toast with the TextView text or do whatever you need.
-//                Toast.makeText(getApplicationContext(), ((TextView) view).getText(), Toast.LENGTH_SHORT).show();
-//
-//            }
-//        });
-
         SQLiteDB db = new SQLiteDB(this);
         List<User> friendList = db.getAllFriends(User.currentUser);
         List<Integer> userIDList = db.getAllFriendsiDs((User.currentUser));
