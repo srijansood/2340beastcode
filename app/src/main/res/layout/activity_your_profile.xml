@@ -121,6 +121,5 @@
         android:layout_alignBottom="@+id/ypSubmitReport"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-       
         android:onClick="saleMap" />
 </RelativeLayout>
